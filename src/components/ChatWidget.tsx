@@ -1,10 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowNotification(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const whatsappNumber = '79991234567';
   const telegramUsername = 'isdo_support';
@@ -18,9 +27,36 @@ const ChatWidget = () => {
     window.open(`https://t.me/${telegramUsername}`, '_blank');
   };
 
+  const handleOpen = () => {
+    setIsOpen(!isOpen);
+    setShowNotification(false);
+  };
+
   return (
     <>
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+        {showNotification && !isOpen && (
+          <div className="animate-scale-in mb-2">
+            <div className="bg-white rounded-lg shadow-xl p-3 max-w-xs border border-gray-200">
+              <div className="flex items-start gap-2">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse mt-2"></div>
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">Онлайн-консультант</p>
+                  <p className="text-xs text-gray-600">Готов ответить на ваши вопросы</p>
+                </div>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  onClick={() => setShowNotification(false)}
+                  className="h-5 w-5 p-0 ml-auto"
+                >
+                  <Icon name="X" size={14} />
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
+
         {isOpen && (
           <Card className="p-4 shadow-2xl animate-scale-in w-72">
             <div className="flex items-center justify-between mb-4">
@@ -72,17 +108,22 @@ const ChatWidget = () => {
           </Card>
         )}
 
-        <Button
-          onClick={() => setIsOpen(!isOpen)}
-          size="lg"
-          className="h-16 w-16 rounded-full bg-primary hover:bg-primary/90 text-white shadow-2xl hover:scale-110 transition-all"
-        >
-          {isOpen ? (
-            <Icon name="X" size={28} />
-          ) : (
-            <Icon name="MessageCircle" size={28} />
-          )}
-        </Button>
+        <div className="relative">
+          <div className="absolute inset-0 rounded-full bg-primary pulse-ring"></div>
+          <div className="absolute inset-0 rounded-full bg-primary pulse-ring" style={{ animationDelay: '1s' }}></div>
+          
+          <Button
+            onClick={handleOpen}
+            size="lg"
+            className="relative h-16 w-16 rounded-full bg-primary hover:bg-primary/90 text-white shadow-2xl hover:scale-110 transition-all float-animation"
+          >
+            {isOpen ? (
+              <Icon name="X" size={28} />
+            ) : (
+              <Icon name="MessageCircle" size={28} />
+            )}
+          </Button>
+        </div>
       </div>
 
       {isOpen && (
