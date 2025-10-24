@@ -38,8 +38,8 @@ const Index = () => {
           </div>
           <nav className="hidden lg:flex gap-8 items-center">
             <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">О платформе</a>
-            <a href="#cases" className="text-sm font-medium hover:text-primary transition-colors">Кейсы</a>
             <a href="#features" className="text-sm font-medium hover:text-primary transition-colors">Возможности</a>
+            <a href="#stats" className="text-sm font-medium hover:text-primary transition-colors">Результаты</a>
             <a href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">Тарифы</a>
           </nav>
           <div className="flex gap-3">
@@ -47,7 +47,7 @@ const Index = () => {
               Контакты<br/>отдел продаж
             </Button>
             <Button className="bg-success hover:bg-success/90 text-white rounded-full">
-              Личный кабинет ▼
+              Личный кабинет
             </Button>
           </div>
         </div>
@@ -56,7 +56,7 @@ const Index = () => {
       <section className="bg-gradient-to-br from-white via-purple-50 to-teal-50 py-16 relative overflow-hidden">
         <div className="absolute top-4 right-4">
           <Badge className="bg-red-500 text-white px-4 py-2 text-base animate-pulse">
-            🔥 Спецпредложение до конца месяца: -30% на первый год
+            90% успешно сдают экзамен с первой попытки
           </Badge>
         </div>
         
@@ -64,50 +64,50 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
               <Badge className="bg-accent text-white px-4 py-2 w-fit">
-                ⚡ Более 10 000 компаний уже используют
+                Подготовка к аттестации Ростехнадзора
               </Badge>
               <h1 className="text-5xl font-bold">
-                <span className="text-accent">Онлайн платформа</span>
+                <span className="text-accent">Интеллектуальная</span>
                 <br/>
-                <span className="text-success">дистанционного</span>
+                <span className="text-success">система подготовки</span>
                 <br/>
-                <span className="text-success">обучения</span>
+                <span className="text-success">к экзаменам РТН</span>
               </h1>
               <p className="text-xl text-gray-700">
-                <strong>Окупаемость за 3 месяца.</strong> Сократите затраты на обучение на 67% и увеличьте вовлечённость сотрудников на 85%
+                <strong>i-SDO</strong> - эффективная платформа для подготовки к экзаменам Ростехнадзора для учебных центров, организаций эксплуатирующих ОПО и гидротехнические сооружения, субъектов энергетики
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Icon name="DollarSign" className="text-success mt-1" size={24} />
-                  <div>
-                    <p className="font-bold text-success text-lg">Экономия до 4 млн ₽/год</p>
-                    <p className="text-sm text-gray-600">не нужны аудитории, командировки и печать материалов</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
                   <Icon name="Clock" className="text-success mt-1" size={24} />
                   <div>
-                    <p className="font-bold text-success text-lg">Запуск за 24 часа</p>
-                    <p className="text-sm text-gray-600">быстрая интеграция и миграция курсов</p>
+                    <p className="font-bold text-success text-lg">Подготовка от 2 часов</p>
+                    <p className="text-sm text-gray-600">за область аттестации</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Icon name="TrendingUp" className="text-success mt-1" size={24} />
+                  <Icon name="CheckCircle" className="text-success mt-1" size={24} />
                   <div>
-                    <p className="font-bold text-success text-lg">+85% вовлечённость</p>
-                    <p className="text-sm text-gray-600">геймификация и интерактивные курсы</p>
+                    <p className="font-bold text-success text-lg">100% соответствие экзамену</p>
+                    <p className="text-sm text-gray-600">процедура идентична Ростехнадзору</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Brain" className="text-success mt-1" size={24} />
+                  <div>
+                    <p className="font-bold text-success text-lg">Адаптивный тренинг</p>
+                    <p className="text-sm text-gray-600">систематизирует знания</p>
                   </div>
                 </div>
               </div>
 
               <div className="flex gap-4 pt-4">
                 <Button size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6">
-                  Получить демо бесплатно
+                  Получить доступ
                   <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-primary text-primary px-8 py-6">
-                  Смотреть видео
+                  Смотреть демо
                   <Icon name="Play" size={20} className="ml-2" />
                 </Button>
               </div>
@@ -115,7 +115,7 @@ const Index = () => {
 
             <div className="relative animate-slide-up">
               <div className="bg-white rounded-2xl shadow-2xl p-8 border-2 border-primary/20">
-                <Badge className="bg-red-500 text-white mb-4">🎁 Бесплатный тест-драйв 14 дней</Badge>
+                <Badge className="bg-red-500 text-white mb-4">60 дней на подготовку</Badge>
                 
                 <div className="flex flex-col border-2 border-primary rounded-lg px-6 py-4 mb-6 w-fit mx-auto">
                   <span className="text-4xl font-bold text-primary leading-none mb-1">i</span>
@@ -129,53 +129,63 @@ const Index = () => {
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
                     <div className="w-20 h-20 mx-auto mb-2 bg-blue-50 rounded-lg flex items-center justify-center">
-                      <Icon name="Monitor" size={32} className="text-primary" />
-                    </div>
-                    <p className="text-xs text-gray-600">Онлайн обучение</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-2 bg-blue-50 rounded-lg flex items-center justify-center">
-                      <Icon name="ClipboardCheck" size={32} className="text-primary" />
+                      <Icon name="FileCheck" size={32} className="text-primary" />
                     </div>
                     <p className="text-xs text-gray-600">Тестирование</p>
                   </div>
                   <div className="text-center">
                     <div className="w-20 h-20 mx-auto mb-2 bg-blue-50 rounded-lg flex items-center justify-center">
-                      <Icon name="Presentation" size={32} className="text-primary" />
+                      <Icon name="Brain" size={32} className="text-primary" />
                     </div>
-                    <p className="text-xs text-gray-600">Вебинары</p>
+                    <p className="text-xs text-gray-600">Адаптивный тренинг</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-20 h-20 mx-auto mb-2 bg-blue-50 rounded-lg flex items-center justify-center">
+                      <Icon name="Award" size={32} className="text-primary" />
+                    </div>
+                    <p className="text-xs text-gray-600">Аттестация</p>
                   </div>
                 </div>
 
                 <Button className="w-full bg-accent hover:bg-accent/90 text-white py-6 text-lg rounded-xl mb-3">
-                  НАЧАТЬ БЕСПЛАТНО
+                  НАЧАТЬ ПОДГОТОВКУ
                 </Button>
-                <p className="text-xs text-center text-gray-500">Без кредитной карты • Полный доступ • Отменить в любой момент</p>
+                <p className="text-xs text-center text-gray-500">90% успешно сдают с первой попытки</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-12 bg-white border-y">
+      <section id="stats" className="py-12 bg-white border-y">
         <div className="container">
-          <p className="text-center text-gray-600 mb-8 text-sm uppercase tracking-wide">Нам доверяют лидеры рынка</p>
-          <div className="flex justify-center items-center gap-12 flex-wrap opacity-60">
-            <div className="text-2xl font-bold text-gray-400">Сбербанк</div>
-            <div className="text-2xl font-bold text-gray-400">РЖД</div>
-            <div className="text-2xl font-bold text-gray-400">Газпром</div>
-            <div className="text-2xl font-bold text-gray-400">Ростелеком</div>
-            <div className="text-2xl font-bold text-gray-400">МТС</div>
+          <p className="text-center text-gray-600 mb-8 text-sm uppercase tracking-wide">Результаты наших клиентов</p>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border-2 border-green-200">
+              <div className="text-5xl font-bold text-success mb-2">90%</div>
+              <p className="text-gray-700 font-semibold">Успешно проходят аттестацию</p>
+              <p className="text-sm text-gray-600 mt-1">с первой попытки</p>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border-2 border-blue-200">
+              <div className="text-5xl font-bold text-primary mb-2">60</div>
+              <p className="text-gray-700 font-semibold">Дней на подготовку</p>
+              <p className="text-sm text-gray-600 mt-1">полный доступ к системе</p>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border-2 border-purple-200">
+              <div className="text-5xl font-bold text-accent mb-2">100%</div>
+              <p className="text-gray-700 font-semibold">Соответствие экзамену</p>
+              <p className="text-sm text-gray-600 mt-1">Ростехнадзора</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="cases" className="py-20 bg-gray-50">
+      <section id="about" className="py-20 bg-gray-50">
         <div className="container">
           <div className="text-center mb-12">
-            <Badge className="mb-4">📊 Реальные результаты</Badge>
-            <h2 className="text-4xl font-bold mb-4">Кейсы наших клиентов</h2>
-            <p className="text-xl text-gray-600">Конкретные цифры эффективности</p>
+            <Badge className="mb-4">О платформе</Badge>
+            <h2 className="text-4xl font-bold mb-4">Для кого наша платформа</h2>
+            <p className="text-xl text-gray-600">Эффективная подготовка к аттестации Ростехнадзора</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -183,210 +193,43 @@ const Index = () => {
               <CardHeader>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                    <Icon name="Building2" className="text-primary" size={24} />
+                    <Icon name="GraduationCap" className="text-primary" size={24} />
                   </div>
-                  <div>
-                    <CardTitle className="text-lg">Производственная компания</CardTitle>
-                    <p className="text-sm text-gray-500">2500 сотрудников</p>
-                  </div>
+                  <CardTitle className="text-lg">Учебные центры</CardTitle>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                    <span className="text-sm">Экономия на обучении</span>
-                    <span className="font-bold text-success text-lg">-67%</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                    <span className="text-sm">Время адаптации новичков</span>
-                    <span className="font-bold text-success text-lg">-45%</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                    <span className="text-sm">Окупаемость</span>
-                    <span className="font-bold text-success text-lg">3 мес</span>
-                  </div>
-                </div>
+                <CardDescription className="text-base">
+                  Комплексное решение для подготовки специалистов к экзаменам Ростехнадзора с полным контролем процесса обучения
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600 italic">"Перевели 2500 сотрудников на дистанционное обучение. Сэкономили 3.8 млн рублей в первый год только на командировках."</p>
-              </CardContent>
             </Card>
 
             <Card className="border-2 hover:shadow-xl transition-all">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
-                    <Icon name="GraduationCap" className="text-accent" size={24} />
+                    <Icon name="Factory" className="text-accent" size={24} />
                   </div>
-                  <div>
-                    <CardTitle className="text-lg">Образовательный центр</CardTitle>
-                    <p className="text-sm text-gray-500">5000 студентов</p>
-                  </div>
+                  <CardTitle className="text-lg">Организации эксплуатирующие ОПО</CardTitle>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
-                    <span className="text-sm">Рост студентов</span>
-                    <span className="font-bold text-accent text-lg">+320%</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
-                    <span className="text-sm">Завершаемость курсов</span>
-                    <span className="font-bold text-accent text-lg">89%</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
-                    <span className="text-sm">Прибыль</span>
-                    <span className="font-bold text-accent text-lg">+280%</span>
-                  </div>
-                </div>
+                <CardDescription className="text-base">
+                  Подготовка сотрудников к аттестации по промышленной безопасности и эксплуатации опасных производственных объектов
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600 italic">"Масштабировали бизнес с 1500 до 5000 студентов без найма дополнительных преподавателей."</p>
-              </CardContent>
             </Card>
 
             <Card className="border-2 hover:shadow-xl transition-all">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
-                    <Icon name="Store" className="text-success" size={24} />
+                    <Icon name="Zap" className="text-success" size={24} />
                   </div>
-                  <div>
-                    <CardTitle className="text-lg">Ритейл сеть</CardTitle>
-                    <p className="text-sm text-gray-500">8000 сотрудников</p>
-                  </div>
+                  <CardTitle className="text-lg">Субъекты энергетики</CardTitle>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                    <span className="text-sm">Скорость обучения</span>
-                    <span className="font-bold text-success text-lg">-60%</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                    <span className="text-sm">Средний чек продаж</span>
-                    <span className="font-bold text-success text-lg">+28%</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                    <span className="text-sm">ROI за год</span>
-                    <span className="font-bold text-success text-lg">450%</span>
-                  </div>
-                </div>
+                <CardDescription className="text-base">
+                  Специализированная подготовка к аттестации в области энергетики и гидротехнических сооружений
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600 italic">"Обучили 8000 продавцов новым техникам продаж за 2 недели. Средний чек вырос на 28%."</p>
-              </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonials" className="py-20 bg-white">
-        <div className="container">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">⭐ Отзывы клиентов</Badge>
-            <h2 className="text-4xl font-bold">Что говорят о нас</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Елена Сергеева',
-                role: 'Директор по персоналу',
-                company: 'ТехноПром',
-                image: '👩‍💼',
-                text: 'Платформа окупилась за 4 месяца! Больше не тратим миллионы на командировки преподавателей. Все курсы онлайн, сотрудники довольны.',
-                rating: 5
-              },
-              {
-                name: 'Дмитрий Волков',
-                role: 'Руководитель учебного центра',
-                company: 'Энергосбыт',
-                image: '👨‍💼',
-                text: 'Внедрили за 2 дня. Техподдержка на высоте — отвечают в течение часа. Особенно нравится система аналитики, видим прогресс каждого сотрудника.',
-                rating: 5
-              },
-              {
-                name: 'Ольга Кузнецова',
-                role: 'Основатель онлайн-школы',
-                company: 'SmartEdu',
-                image: '👩‍🏫',
-                text: 'Масштабировали с 300 до 2000 студентов благодаря автоматизации. Платформа полностью заменила 5 разных сервисов. Экономия времени и денег.',
-                rating: 5
-              },
-            ].map((testimonial, i) => (
-              <Card key={i} className="border-2">
-                <CardHeader>
-                  <div className="flex items-start gap-4">
-                    <div className="text-5xl">{testimonial.image}</div>
-                    <div className="flex-1">
-                      <CardTitle className="text-lg mb-1">{testimonial.name}</CardTitle>
-                      <p className="text-sm text-gray-600">{testimonial.role}</p>
-                      <p className="text-sm text-primary font-semibold">{testimonial.company}</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-1 mt-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
-                    ))}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700 italic">"{testimonial.text}"</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gradient-to-r from-accent to-primary text-white">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Badge className="bg-white text-accent px-4 py-2">⏰ Ограниченное предложение</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold">Получите 3 месяца бесплатно при оплате годового тарифа</h2>
-            <p className="text-xl opacity-90">+ Бесплатная миграция всех курсов + Персональный онбординг + Приоритетная поддержка</p>
-            <div className="flex gap-4 justify-center pt-4">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100 text-lg px-8 py-6">
-                Забронировать скидку
-                <Icon name="ArrowRight" size={20} className="ml-2" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6">
-                Узнать подробнее
-              </Button>
-            </div>
-            <p className="text-sm opacity-75">⏳ Предложение действует до конца месяца • Осталось 7 дней</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="demo" className="py-20 bg-gray-50">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge className="mb-4">🎥 Демо платформы</Badge>
-              <h2 className="text-4xl font-bold mb-4">Посмотрите, как это работает</h2>
-              <p className="text-xl text-gray-600">2-минутное видео о возможностях платформы</p>
-            </div>
-
-            <div className="relative aspect-video bg-gradient-to-br from-primary to-accent rounded-2xl shadow-2xl flex items-center justify-center group cursor-pointer">
-              <div className="absolute inset-0 bg-black/20 rounded-2xl group-hover:bg-black/30 transition-all"></div>
-              <Button size="lg" className="relative bg-white text-primary hover:bg-gray-100 rounded-full w-20 h-20 p-0">
-                <Icon name="Play" size={40} />
-              </Button>
-              <div className="absolute bottom-6 left-6 text-white">
-                <p className="text-sm font-semibold mb-1">Обзор платформы i-SDO</p>
-                <p className="text-xs opacity-75">2:15 мин • 10К просмотров</p>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-4 gap-6 mt-12">
-              {[
-                { icon: 'Layout', text: 'Интуитивный интерфейс' },
-                { icon: 'Zap', text: 'Быстрая загрузка курсов' },
-                { icon: 'BarChart', text: 'Детальная аналитика' },
-                { icon: 'Smartphone', text: 'Мобильное приложение' },
-              ].map((item, i) => (
-                <div key={i} className="text-center p-6 bg-white rounded-lg border-2">
-                  <Icon name={item.icon as any} size={32} className="mx-auto mb-3 text-primary" />
-                  <p className="font-semibold">{item.text}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -394,19 +237,61 @@ const Index = () => {
       <section id="features" className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-12">
-            <Badge className="mb-4">⚙️ Возможности</Badge>
-            <h2 className="text-4xl font-bold mb-4">Всё необходимое в одной платформе</h2>
-            <p className="text-xl text-gray-600">Замените 7+ сервисов одним решением</p>
+            <Badge className="mb-4">Преимущества</Badge>
+            <h2 className="text-4xl font-bold mb-4">Почему выбирают i-SDO</h2>
+            <p className="text-xl text-gray-600">Ключевые преимущества платформы</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: 'BookMarked', title: 'Конструктор курсов', desc: 'Создавайте интерактивные курсы за 10 минут без программирования', badge: '🔥 Популярно' },
-              { icon: 'Users', title: 'Управление группами', desc: 'Автоматическое распределение по группам и назначение курсов' },
-              { icon: 'Video', title: 'Вебинары HD', desc: 'Встроенная система видеоконференций до 1000 участников' },
-              { icon: 'ClipboardList', title: 'Умное тестирование', desc: 'AI-проверка эссе и автоматическая генерация вопросов', badge: '✨ AI' },
-              { icon: 'BarChart3', title: 'Аналитика в реальном времени', desc: 'Дашборды, отчёты, прогнозирование результатов' },
-              { icon: 'Award', title: 'Геймификация', desc: 'Рейтинги, бейджи, достижения — увеличение вовлечённости на 85%', badge: '🎮 Новое' },
+              { 
+                icon: 'Clock', 
+                title: 'Экономит время', 
+                desc: 'Эффективная система подготовки - от 2 часов за область аттестации',
+                badge: 'Быстро'
+              },
+              { 
+                icon: 'Server', 
+                title: 'Не требуется серверов', 
+                desc: 'Облачное решение - не нужны ИТ специалисты и дорогостоящая инфраструктура'
+              },
+              { 
+                icon: 'UserCheck', 
+                title: 'Персональный менеджер', 
+                desc: 'Индивидуальное сопровождение на всех этапах использования платформы'
+              },
+              { 
+                icon: 'Headphones', 
+                title: 'Круглосуточная техподдержка', 
+                desc: 'Поддержка 24/7 - всегда готовы помочь в решении любых вопросов',
+                badge: '24/7'
+              },
+              { 
+                icon: 'CheckCircle', 
+                title: 'Процедура экзамена идентична РТН', 
+                desc: '100% соответствие формату и содержанию экзаменов Ростехнадзора'
+              },
+              { 
+                icon: 'Brain', 
+                title: 'Адаптивный тренинг', 
+                desc: 'Интеллектуальная система систематизирует знания и выявляет слабые места',
+                badge: 'AI'
+              },
+              { 
+                icon: 'Palette', 
+                title: 'Брендирование личного кабинета', 
+                desc: 'Настройка интерфейса под ваш корпоративный стиль и логотип'
+              },
+              { 
+                icon: 'Globe', 
+                title: 'Размещение на вашем домене', 
+                desc: 'Возможность развертывания платформы на собственном домене организации'
+              },
+              { 
+                icon: 'Target', 
+                title: 'Подготовка от 2 часов', 
+                desc: 'Минимальное время подготовки за область аттестации при максимальной эффективности'
+              },
             ].map((feature, i) => (
               <Card key={i} className="border-2 hover:border-primary transition-all hover:shadow-lg group">
                 <CardHeader>
@@ -425,64 +310,81 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 bg-gradient-to-r from-accent to-primary text-white">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <Badge className="bg-white text-accent px-4 py-2">Результаты</Badge>
+            <h2 className="text-4xl md:text-5xl font-bold">90% успешно проходят аттестацию с первой попытки</h2>
+            <p className="text-xl opacity-90">60 дней полного доступа к системе подготовки + 100% соответствие экзамену Ростехнадзора</p>
+            <div className="flex gap-4 justify-center pt-4">
+              <Button size="lg" className="bg-white text-primary hover:bg-gray-100 text-lg px-8 py-6">
+                Начать подготовку
+                <Icon name="ArrowRight" size={20} className="ml-2" />
+              </Button>
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6">
+                Узнать подробнее
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="pricing" className="py-20 bg-gray-50">
         <div className="container">
           <div className="text-center mb-12">
-            <Badge className="mb-4">💰 Тарифы</Badge>
-            <h2 className="text-4xl font-bold mb-4">Прозрачные цены без скрытых платежей</h2>
-            <p className="text-xl text-gray-600">Выберите тариф и начните экономить уже сегодня</p>
+            <Badge className="mb-4">Тарифы</Badge>
+            <h2 className="text-4xl font-bold mb-4">Выберите подходящий тариф</h2>
+            <p className="text-xl text-gray-600">Гибкие условия для организаций любого масштаба</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               { 
-                name: 'Стартовый', 
-                price: '4 900', 
-                oldPrice: '7 000',
-                period: '/ месяц',
-                users: 'До 50 пользователей', 
+                name: 'Базовый', 
+                price: 'По запросу', 
+                period: '',
+                users: 'Для учебных центров', 
                 features: [
-                  { text: '5 курсов', included: true },
-                  { text: 'Базовая аналитика', included: true },
-                  { text: 'Email поддержка', included: true },
-                  { text: 'Мобильное приложение', included: true },
-                  { text: 'Вебинары', included: false },
-                  { text: 'AI-функции', included: false }
+                  { text: 'Доступ к базе вопросов РТН', included: true },
+                  { text: 'Адаптивный тренинг', included: true },
+                  { text: 'Техподдержка 24/7', included: true },
+                  { text: 'Мобильная версия', included: true },
+                  { text: 'Персональный менеджер', included: false },
+                  { text: 'Брендирование', included: false }
                 ],
-                cta: 'Попробовать 14 дней',
+                cta: 'Оставить заявку',
                 color: 'border-gray-200'
               },
               { 
-                name: 'Бизнес', 
-                price: '14 900', 
-                oldPrice: '21 000',
-                period: '/ месяц',
-                users: 'До 200 пользователей', 
+                name: 'Профессиональный', 
+                price: 'По запросу',
+                period: '',
+                users: 'Для организаций эксплуатирующих ОПО', 
                 features: [
-                  { text: 'Безлимитные курсы', included: true },
-                  { text: 'Расширенная аналитика', included: true },
-                  { text: 'Приоритетная поддержка 24/7', included: true },
-                  { text: 'Вебинары до 100 человек', included: true },
-                  { text: 'AI-ассистент', included: true },
-                  { text: 'API доступ', included: true }
+                  { text: 'Все из тарифа Базовый', included: true },
+                  { text: 'Персональный менеджер', included: true },
+                  { text: 'Приоритетная поддержка', included: true },
+                  { text: 'Детальная аналитика', included: true },
+                  { text: 'Брендирование кабинета', included: true },
+                  { text: 'API интеграция', included: true }
                 ],
                 popular: true,
-                cta: 'Начать сейчас',
+                cta: 'Оставить заявку',
                 color: 'border-primary',
-                badge: '🔥 Хит продаж'
+                badge: 'Популярный'
               },
               { 
                 name: 'Корпоративный', 
-                price: 'От 39 900', 
-                period: '/ месяц',
-                users: 'Неограниченно', 
+                price: 'По запросу', 
+                period: '',
+                users: 'Для субъектов энергетики', 
                 features: [
-                  { text: 'Всё из тарифа Бизнес', included: true },
-                  { text: 'Персональный менеджер', included: true },
+                  { text: 'Все из тарифа Профессиональный', included: true },
+                  { text: 'Размещение на вашем домене', included: true },
                   { text: 'Индивидуальная настройка', included: true },
                   { text: 'SLA 99.9%', included: true },
-                  { text: 'Интеграции (1C, SAP)', included: true },
-                  { text: 'On-premise решение', included: true }
+                  { text: 'Обучение администраторов', included: true },
+                  { text: 'Выделенный сервер', included: true }
                 ],
                 cta: 'Связаться с нами',
                 color: 'border-gray-200'
@@ -498,17 +400,11 @@ const Index = () => {
                   <CardTitle className="text-2xl mb-2">{plan.name}</CardTitle>
                   <div className="text-sm text-gray-600 mb-4">{plan.users}</div>
                   <div className="mb-4">
-                    {plan.oldPrice && (
-                      <div className="text-lg text-gray-400 line-through">{plan.oldPrice} ₽</div>
-                    )}
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-bold">{plan.price}</span>
-                      <span className="text-gray-500 text-sm">{plan.period}</span>
+                      <span className="text-3xl font-bold">{plan.price}</span>
+                      {plan.period && <span className="text-gray-500 text-sm">{plan.period}</span>}
                     </div>
                   </div>
-                  {plan.oldPrice && (
-                    <Badge className="bg-green-100 text-success mx-auto">💰 Экономия 30%</Badge>
-                  )}
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <ul className="space-y-3 mb-6">
@@ -529,17 +425,17 @@ const Index = () => {
                   >
                     {plan.cta}
                   </Button>
-                  <p className="text-xs text-center text-gray-500">Без обязательств • Отменить в любой момент</p>
+                  <p className="text-xs text-center text-gray-500">Персональная консультация по тарифам</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Нужно больше пользователей?</p>
+            <p className="text-gray-600 mb-4">Нужно индивидуальное решение?</p>
             <Button variant="outline" size="lg" className="border-2 border-primary text-primary">
-              Рассчитать индивидуальный тариф
-              <Icon name="Calculator" size={20} className="ml-2" />
+              Получить индивидуальное предложение
+              <Icon name="ArrowRight" size={20} className="ml-2" />
             </Button>
           </div>
         </div>
@@ -548,35 +444,35 @@ const Index = () => {
       <section id="faq" className="py-20 bg-white">
         <div className="container max-w-4xl">
           <div className="text-center mb-12">
-            <Badge className="mb-4">❓ FAQ</Badge>
+            <Badge className="mb-4">FAQ</Badge>
             <h2 className="text-4xl font-bold">Часто задаваемые вопросы</h2>
           </div>
 
           <Accordion type="single" collapsible className="space-y-4">
             {[
               { 
-                q: 'Как быстро можно начать работу с платформой?', 
-                a: 'Регистрация занимает 2 минуты. Сразу после регистрации вы получаете доступ к платформе и можете загрузить первый курс. Мы также предоставляем бесплатную помощь в миграции ваших курсов — это занимает 1-2 дня.' 
+                q: 'Как долго длится подготовка?', 
+                a: 'Минимальная подготовка занимает от 2 часов за область аттестации. Полный доступ к системе предоставляется на 60 дней, что позволяет качественно подготовиться к экзамену.' 
               },
               { 
-                q: 'Нужно ли устанавливать дополнительное ПО?', 
-                a: 'Нет, всё работает в браузере. Платформа облачная, не требует установки и настройки серверов. Мобильные приложения для iOS и Android доступны для скачивания из App Store и Google Play.' 
+                q: 'Соответствует ли система реальному экзамену Ростехнадзора?', 
+                a: 'Да, процедура экзамена в i-SDO на 100% идентична экзамену Ростехнадзора. Используются актуальные вопросы и формат тестирования полностью соответствует требованиям РТН.' 
               },
               { 
-                q: 'Можно ли перенести курсы из другой LMS?', 
-                a: 'Да, мы бесплатно поможем перенести курсы из любой системы. Поддерживаем импорт SCORM, xAPI, PDF, видео и других форматов. Миграция обычно занимает 1-3 дня.' 
+                q: 'Нужны ли серверы и ИТ-специалисты?', 
+                a: 'Нет, платформа полностью облачная. Не требуется закупка и обслуживание серверов, не нужны ИТ-специалисты. Всё работает через браузер.' 
               },
               { 
-                q: 'Какая техподдержка включена в тариф?', 
-                a: 'Стартовый тариф — email поддержка (ответ в течение 24 часов). Бизнес и Корпоративный — приоритетная поддержка 24/7 через чат, email и телефон (ответ в течение 1 часа). Корпоративный тариф включает персонального менеджера.' 
+                q: 'Какая поддержка предоставляется?', 
+                a: 'Круглосуточная техподдержка 24/7 доступна для всех клиентов. Дополнительно предоставляется персональный менеджер для сопровождения на всех этапах использования платформы.' 
               },
               { 
-                q: 'Безопасны ли данные в облаке?', 
-                a: 'Да. Мы используем шифрование данных по стандарту AES-256, регулярное резервное копирование, защиту от DDoS. Наши серверы находятся в сертифицированных дата-центрах уровня Tier III. Соответствуем требованиям 152-ФЗ о персональных данных.' 
+                q: 'Можно ли настроить систему под наш бренд?', 
+                a: 'Да, доступно брендирование личного кабинета под ваш корпоративный стиль и логотип. Также возможно размещение платформы на вашем собственном домене.' 
               },
               { 
-                q: 'Можно ли отменить подписку в любой момент?', 
-                a: 'Да, вы можете отменить подписку в любой момент из личного кабинета. Возврат средств за неиспользованный период осуществляется в течение 5 рабочих дней. Никаких штрафов за досрочное расторжение нет.' 
+                q: 'Какой процент успешной сдачи экзамена?', 
+                a: '90% пользователей i-SDO успешно проходят аттестацию Ростехнадзора с первой попытки благодаря эффективной системе подготовки и адаптивному тренингу.' 
               },
             ].map((item, i) => (
               <AccordionItem key={i} value={`item-${i}`} className="bg-gray-50 border-2 rounded-lg px-6">
@@ -591,8 +487,8 @@ const Index = () => {
           </Accordion>
 
           <div className="mt-12 text-center p-8 bg-blue-50 rounded-xl border-2 border-primary/20">
-            <h3 className="text-xl font-bold mb-2">Не нашли ответ на свой вопрос?</h3>
-            <p className="text-gray-600 mb-4">Свяжитесь с нами, и мы ответим в течение 15 минут</p>
+            <h3 className="text-xl font-bold mb-2">Остались вопросы?</h3>
+            <p className="text-gray-600 mb-4">Свяжитесь с нами, и мы ответим на все ваши вопросы</p>
             <div className="flex gap-3 justify-center">
               <Button className="bg-primary hover:bg-primary/90 text-white">
                 <Icon name="MessageCircle" size={20} className="mr-2" />
@@ -600,7 +496,7 @@ const Index = () => {
               </Button>
               <Button variant="outline" className="border-2 border-primary text-primary">
                 <Icon name="Phone" size={20} className="mr-2" />
-                +7 (495) 123-45-67
+                Заказать звонок
               </Button>
             </div>
           </div>
@@ -611,31 +507,31 @@ const Index = () => {
         <div className="container max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="bg-white text-primary px-4 py-2 mb-6">🚀 Начните сегодня</Badge>
-              <h2 className="text-4xl font-bold mb-6">Готовы трансформировать обучение в вашей компании?</h2>
+              <Badge className="bg-white text-primary px-4 py-2 mb-6">Начните подготовку</Badge>
+              <h2 className="text-4xl font-bold mb-6">Готовы начать подготовку к аттестации?</h2>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center gap-3">
                   <Icon name="CheckCircle" size={24} />
-                  <span className="text-lg">Бесплатный тест-драйв 14 дней</span>
+                  <span className="text-lg">60 дней полного доступа</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Icon name="CheckCircle" size={24} />
-                  <span className="text-lg">Персональная демонстрация</span>
+                  <span className="text-lg">90% успешно сдают с первой попытки</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Icon name="CheckCircle" size={24} />
-                  <span className="text-lg">Помощь с миграцией курсов</span>
+                  <span className="text-lg">Персональный менеджер</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Icon name="CheckCircle" size={24} />
-                  <span className="text-lg">Расчёт ROI для вашей компании</span>
+                  <span className="text-lg">Техподдержка 24/7</span>
                 </li>
               </ul>
             </div>
 
             <Card className="border-2">
               <CardContent className="pt-6">
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Получить демо бесплатно</h3>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Оставить заявку</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-semibold text-gray-700">Ваше имя *</label>
@@ -649,11 +545,10 @@ const Index = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-semibold text-gray-700">Рабочий Email *</label>
+                    <label htmlFor="email" className="text-sm font-semibold text-gray-700">Email или телефон *</label>
                     <Input
                       id="email"
-                      type="email"
-                      placeholder="ivan@company.ru"
+                      placeholder="ivan@company.ru или +7 (999) 123-45-67"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="h-12"
@@ -661,20 +556,20 @@ const Index = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-semibold text-gray-700">Сколько сотрудников планируете обучать?</label>
+                    <label htmlFor="message" className="text-sm font-semibold text-gray-700">Область аттестации</label>
                     <Textarea
                       id="message"
-                      placeholder="Например: 500 сотрудников, нужны курсы по продажам и охране труда"
+                      placeholder="Укажите область аттестации или оставьте комментарий"
                       rows={3}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     />
                   </div>
                   <Button type="submit" className="w-full h-12 bg-accent hover:bg-accent/90 text-white text-base">
-                    Получить демо за 15 минут
+                    Получить консультацию
                     <Icon name="ArrowRight" size={18} className="ml-2" />
                   </Button>
-                  <p className="text-xs text-center text-gray-500">Без спама • Ответим в течение 15 минут • Никаких обязательств</p>
+                  <p className="text-xs text-center text-gray-500">Ответим в течение 15 минут</p>
                 </form>
               </CardContent>
             </Card>
@@ -695,24 +590,31 @@ const Index = () => {
                   <span>система подготовки</span>
                 </div>
               </div>
-              <p className="text-sm text-gray-600">Современная LMS-платформа для эффективного корпоративного и онлайн-обучения</p>
+              <p className="text-sm text-gray-600 mb-3">Эффективная подготовка к аттестации Ростехнадзора</p>
+              <div className="text-xs text-gray-500 space-y-1">
+                <p>Свидетельство ПО №2024661434</p>
+                <p>от 15.07.2024</p>
+                <p className="pt-2">Правообладатель:</p>
+                <p>ООО Современные технологии обучения</p>
+                <p>ИНН 9718135635</p>
+              </div>
             </div>
             <div>
               <h4 className="font-semibold mb-3">Продукт</h4>
               <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="#about" className="hover:text-primary">О платформе</a></li>
                 <li><a href="#features" className="hover:text-primary">Возможности</a></li>
+                <li><a href="#stats" className="hover:text-primary">Результаты</a></li>
                 <li><a href="#pricing" className="hover:text-primary">Тарифы</a></li>
-                <li><a href="#cases" className="hover:text-primary">Кейсы</a></li>
-                <li><a href="#" className="hover:text-primary">Интеграции</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Компания</h4>
+              <h4 className="font-semibold mb-3">Аттестация</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li><a href="#about" className="hover:text-primary">О нас</a></li>
-                <li><a href="#" className="hover:text-primary">Блог</a></li>
-                <li><a href="#" className="hover:text-primary">Карьера</a></li>
-                <li><a href="#contact" className="hover:text-primary">Контакты</a></li>
+                <li><a href="#" className="hover:text-primary">ОПО</a></li>
+                <li><a href="#" className="hover:text-primary">Гидротехнические сооружения</a></li>
+                <li><a href="#" className="hover:text-primary">Энергетика</a></li>
+                <li><a href="#" className="hover:text-primary">Промышленная безопасность</a></li>
               </ul>
             </div>
             <div>
@@ -720,8 +622,8 @@ const Index = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li><a href="#faq" className="hover:text-primary">FAQ</a></li>
                 <li><a href="#" className="hover:text-primary">База знаний</a></li>
-                <li><a href="#" className="hover:text-primary">+7 (495) 123-45-67</a></li>
-                <li><a href="#" className="hover:text-primary">info@i-sdo.ru</a></li>
+                <li><a href="#contact" className="hover:text-primary">Контакты</a></li>
+                <li className="pt-2 font-semibold text-primary">Техподдержка 24/7</li>
               </ul>
             </div>
           </div>
