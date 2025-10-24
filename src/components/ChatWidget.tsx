@@ -42,15 +42,30 @@ const ChatWidget = () => {
   const telegramUsername = '79850953131';
   const whatsappMessage = encodeURIComponent('Здравствуйте! Хочу узнать больше о платформе i-SDO');
 
+  const sendToBitrix = async (action: string, channel: string) => {
+    try {
+      await fetch('https://functions.poehali.dev/d6d9e453-39e5-4646-91e2-f55187551450', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action, channel, phone: '+79850953131' })
+      });
+    } catch (error) {
+      console.error('Bitrix24 error:', error);
+    }
+  };
+
   const openWhatsApp = () => {
+    sendToBitrix('whatsapp_click', 'WhatsApp');
     window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
   };
 
   const openTelegram = () => {
+    sendToBitrix('telegram_click', 'Telegram');
     window.open(`https://t.me/${telegramUsername}`, '_blank');
   };
 
   const saveContact = () => {
+    sendToBitrix('save_contact', 'VCard Download');
     const vcard = `BEGIN:VCARD
 VERSION:3.0
 FN:i-SDO Поддержка
@@ -143,13 +158,20 @@ END:VCARD`;
 
               <div className="text-center pt-2 border-t">
                 <p className="text-xs text-gray-500 mb-2">или позвоните нам</p>
-                <a href="tel:+79850953131" className="text-sm font-semibold text-primary hover:underline block mb-3">
+                <a 
+                  href="tel:+79850953131" 
+                  onClick={() => sendToBitrix('phone_click', 'Phone Call')}
+                  className="text-sm font-semibold text-primary hover:underline block mb-3"
+                >
                   +7 (985) 095-31-31
                 </a>
                 
                 <div className="flex gap-2">
                   <Button
-                    onClick={() => setShowQR(!showQR)}
+                    onClick={() => {
+                      if (!showQR) sendToBitrix('qr_scan', 'QR Code');
+                      setShowQR(!showQR);
+                    }}
                     variant="outline"
                     size="sm"
                     className="flex-1 flex items-center justify-center gap-1"

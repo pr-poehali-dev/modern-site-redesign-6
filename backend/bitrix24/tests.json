@@ -1,0 +1,40 @@
+{
+  "tests": [
+    {
+      "name": "Send WhatsApp lead to Bitrix24",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "action": "whatsapp_click",
+        "channel": "WhatsApp",
+        "phone": "+79850953131"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Send Telegram lead to Bitrix24",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "action": "telegram_click",
+        "channel": "Telegram",
+        "phone": "+79850953131"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Handle OPTIONS request",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}
