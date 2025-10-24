@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { QRCodeSVG } from 'qrcode.react';
 
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
+  const [showQR, setShowQR] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -46,6 +48,23 @@ const ChatWidget = () => {
 
   const openTelegram = () => {
     window.open(`https://t.me/${telegramUsername}`, '_blank');
+  };
+
+  const saveContact = () => {
+    const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:i-SDO Поддержка
+TEL;TYPE=CELL:+79850953131
+END:VCARD`;
+    const blob = new Blob([vcard], { type: 'text/vcard' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'isdo-contact.vcf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
   };
 
   const handleOpen = () => {
@@ -122,11 +141,46 @@ const ChatWidget = () => {
                 Telegram
               </Button>
 
-              <div className="text-center">
-                <p className="text-xs text-gray-500">или позвоните нам</p>
-                <a href="tel:+79850953131" className="text-sm font-semibold text-primary hover:underline">
+              <div className="text-center pt-2 border-t">
+                <p className="text-xs text-gray-500 mb-2">или позвоните нам</p>
+                <a href="tel:+79850953131" className="text-sm font-semibold text-primary hover:underline block mb-3">
                   +7 (985) 095-31-31
                 </a>
+                
+                <div className="flex gap-2">
+                  <Button
+                    onClick={() => setShowQR(!showQR)}
+                    variant="outline"
+                    size="sm"
+                    className="flex-1 flex items-center justify-center gap-1"
+                  >
+                    <Icon name="QrCode" size={16} />
+                    QR-код
+                  </Button>
+                  <Button
+                    onClick={saveContact}
+                    variant="outline"
+                    size="sm"
+                    className="flex-1 flex items-center justify-center gap-1"
+                  >
+                    <Icon name="Download" size={16} />
+                    Сохранить
+                  </Button>
+                </div>
+
+                {showQR && (
+                  <div className="mt-4 p-3 bg-white rounded-lg border">
+                    <p className="text-xs text-gray-600 mb-2">Отсканируйте для быстрой связи</p>
+                    <div className="flex justify-center">
+                      <QRCodeSVG 
+                        value={`tel:+79850953131`}
+                        size={120}
+                        level="H"
+                        includeMargin
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </Card>
