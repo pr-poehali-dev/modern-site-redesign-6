@@ -6,14 +6,35 @@ import Icon from '@/components/ui/icon';
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowNotification(true);
+      setUnreadCount(1);
+      playNotificationSound();
     }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
+
+  const playNotificationSound = () => {
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    oscillator.frequency.value = 800;
+    oscillator.type = 'sine';
+
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.3);
+  };
 
   const whatsappNumber = '79991234567';
   const telegramUsername = 'isdo_support';
@@ -30,6 +51,9 @@ const ChatWidget = () => {
   const handleOpen = () => {
     setIsOpen(!isOpen);
     setShowNotification(false);
+    if (!isOpen) {
+      setUnreadCount(0);
+    }
   };
 
   return (
@@ -111,6 +135,12 @@ const ChatWidget = () => {
         <div className="relative">
           <div className="absolute inset-0 rounded-full bg-primary pulse-ring"></div>
           <div className="absolute inset-0 rounded-full bg-primary pulse-ring" style={{ animationDelay: '1s' }}></div>
+          
+          {unreadCount > 0 && !isOpen && (
+            <div className="absolute -top-1 -right-1 z-10 h-6 w-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg animate-bounce">
+              {unreadCount}
+            </div>
+          )}
           
           <Button
             onClick={handleOpen}
