@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
+import ChatWidget from '@/components/ChatWidget';
 
 const Index = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -746,6 +747,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <ChatWidget />
     </div>
   );
 };
