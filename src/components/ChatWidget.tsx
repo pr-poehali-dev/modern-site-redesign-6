@@ -36,8 +36,8 @@ const ChatWidget = () => {
     oscillator.stop(audioContext.currentTime + 0.3);
   };
 
-  const whatsappNumber = '79991234567';
-  const telegramUsername = 'isdo_support';
+  const whatsappNumber = '79850953131';
+  const telegramUsername = '79850953131';
   const whatsappMessage = encodeURIComponent('Здравствуйте! Хочу узнать больше о платформе i-SDO');
 
   const openWhatsApp = () => {
@@ -124,8 +124,8 @@ const ChatWidget = () => {
 
               <div className="text-center">
                 <p className="text-xs text-gray-500">или позвоните нам</p>
-                <a href="tel:+74951234567" className="text-sm font-semibold text-primary hover:underline">
-                  +7 (495) 123-45-67
+                <a href="tel:+79850953131" className="text-sm font-semibold text-primary hover:underline">
+                  +7 (985) 095-31-31
                 </a>
               </div>
             </div>
