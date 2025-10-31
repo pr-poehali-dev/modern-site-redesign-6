@@ -85,9 +85,6 @@ const Index = () => {
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 animate-fade-in">
-              <Badge className="bg-gradient-to-r from-accent to-purple-600 text-white px-6 py-3 w-fit shadow-lg font-semibold text-base">
-                ⚡ Подготовка к аттестации Ростехнадзора
-              </Badge>
               <h1 className="text-6xl font-black leading-tight">
                 <span className="bg-gradient-to-r from-accent via-purple-600 to-primary bg-clip-text text-transparent">
                   Интеллектуальная
